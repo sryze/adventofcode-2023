@@ -12,10 +12,10 @@ func isDigit(r rune) bool {
 	return r >= '0' && r <= '9'
 }
 
-func part1(reader io.Reader) {
+func part1(input io.Reader) {
 	sum := 0
 
-	scanner := bufio.NewScanner(reader)
+	scanner := bufio.NewScanner(input)
 	for scanner.Scan() {
 		line := scanner.Text()
 		firstDigitIndex := strings.IndexFunc(line, isDigit)
@@ -26,12 +26,12 @@ func part1(reader io.Reader) {
 	fmt.Printf("%d\n", sum)
 }
 
-func part2(reader io.Reader) {
+func part2(input io.Reader) {
 	sum := 0
 
 	digitWords := []string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
 
-	scanner := bufio.NewScanner(reader)
+	scanner := bufio.NewScanner(input)
 	for scanner.Scan() {
 		line := scanner.Text()
 		firstDigitIndex := strings.IndexFunc(line, isDigit)

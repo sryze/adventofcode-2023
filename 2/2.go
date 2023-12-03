@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func part1(reader io.Reader) {
+func part1(input io.Reader) {
 	bagConfig := map[string]int{
 		"red":   12,
 		"green": 13,
@@ -18,7 +18,7 @@ func part1(reader io.Reader) {
 
 	possibleGameIds := make([]int, 0)
 
-	scanner := bufio.NewScanner(reader)
+	scanner := bufio.NewScanner(input)
 	for scanner.Scan() {
 		line := scanner.Text()
 
@@ -58,10 +58,10 @@ func part1(reader io.Reader) {
 	fmt.Printf("%d\n", sum)
 }
 
-func part2(reader io.Reader) {
+func part2(input io.Reader) {
 	powers := make([]int, 0)
 
-	scanner := bufio.NewScanner(reader)
+	scanner := bufio.NewScanner(input)
 	for scanner.Scan() {
 		line := scanner.Text()
 
